@@ -6,6 +6,7 @@
 # to list the available versions:
 # /usr/libexec/java_home -V
 
-function setjdk -a version -d "Change the current JDK version"
-  set -x JAVA_HOME (/usr/libexec/java_home -v $version)
+function setjdk
+  set -x JAVA_HOME (/usr/libexec/java_home -v $argv)
+  javac -version
 end
