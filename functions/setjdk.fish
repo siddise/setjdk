@@ -7,6 +7,6 @@
 # /usr/libexec/java_home -V
 
 function setjdk
-  set -x JAVA_HOME (/usr/libexec/java_home -v $argv)
+  set -gx JAVA_HOME (/usr/libexec/java_home -v $argv)
   javac -version
 end
