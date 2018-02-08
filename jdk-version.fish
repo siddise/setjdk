@@ -6,8 +6,6 @@
 # to list the available versions:
 # /usr/libexec/java_home -V
 
-set -x JAVA_HOME (/usr/libexec/java_home -v 1.8)
-
-function setjdk
-  set -x JAVA_HOME (/usr/libexec/java_home -v $argv)
+function setjdk -a version -d "Change the current JDK version"
+  set -x JAVA_HOME (/usr/libexec/java_home -v $version)
 end
